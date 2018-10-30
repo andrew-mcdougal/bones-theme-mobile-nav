@@ -1,4 +1,8 @@
 #menu-main.nav {
-  display: none; }
+  max-height: 0;
+  overflow: hidden;
+  transition: all .4s ease; }
+  #menu-main.nav.show-menu {
+    max-height: 100vh; }
 
 /*# sourceMappingURL=ontrend.css.map */
