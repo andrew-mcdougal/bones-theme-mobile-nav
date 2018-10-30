@@ -58,3 +58,6 @@ temp/
 *.scssc
 
 /vendor/
+
+.sass-cache
+ontrend.css.map
