@@ -244,4 +244,38 @@ function bones_fonts() {
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
 
+
+// ONTREND FUNCTIONS
+
+function prefix_add_footer_styles() {
+  wp_enqueue_script( 'custom-js', get_stylesheet_directory_uri() . '/library/js/ontrend.js?v=1' );
+    wp_enqueue_style( 'ontrend-css', get_stylesheet_directory_uri() . '/library/css/ontrend.css?v=1' );
+};
+add_action( 'get_footer', 'prefix_add_footer_styles' );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>
