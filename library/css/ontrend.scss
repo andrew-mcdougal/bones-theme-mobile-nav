@@ -1,11 +1,11 @@
 // mobile first header
 
-#menu-main.nav {
-	max-height: 0;
-	overflow: hidden;
-	transition: all .4s ease;
+.nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: all .4s ease;
 
-	&.show-menu {
-		max-height: 100vh;
-	}
+  &.show-menu {
+    max-height: 100vh;
+  }
 }

@@ -22,10 +22,10 @@ $hamburger-layer-width         : 25px !default;
 $hamburger-layer-height        : 3px !default;
 
 //$hamburger-layer-spacing       : 6px !default;
-$hamburger-layer-spacing       : 3px !default;
+$hamburger-layer-spacing       : 4px !default;
 
 //$hamburger-layer-color         : #000 !default;
-$hamburger-layer-color         : #000 !default;
+$hamburger-layer-color         : #fff !default;
 
 //$hamburger-layer-border-radius : 4px !default;
 $hamburger-layer-border-radius : 4px !default;
@@ -135,3 +135,9 @@ $hamburger-types: (
 //     ...
 //   }
 // }
+.hamburger {
+  //background: green;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
