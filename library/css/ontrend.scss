@@ -1,11 +1,60 @@
-// mobile first header
+$white: #FFF;
+$primary: #2C3B41;
+$primary-lite: lighten($primary, 20%);
 
+
+
+// settings
+body {
+  font-size: 18px;
+  line-height: 120%;
+}
+
+
+
+
+// mobile first header
+.header {
+  background: $primary;
+}
+
+// hamburger
+.hamburger {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+// no height mobile nav for slidedown effect
 .nav {
   max-height: 0;
   overflow: hidden;
-  transition: all .4s ease;
+  transition: all .4s ease-in;
 
   &.show-menu {
     max-height: 100vh;
   }
+}
+
+// site header
+.header-font {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.site-header {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  margin: .5em .25em 0;
+  font-weight: 700;
+
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+.site-subheader {
+  font-size: 1em;
+  margin: 0em 0 .5em 1.4em;
+  color: $primary-lite;
 }
