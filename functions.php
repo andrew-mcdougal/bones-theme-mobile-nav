@@ -240,6 +240,7 @@ and be up and running in seconds.
 */
 function bones_fonts() {
   wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Cormorant+Garamond:400,400i,700');
+  wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css');
 }
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
