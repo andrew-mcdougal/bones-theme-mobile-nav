@@ -62,4 +62,37 @@ body {
   font-size: 1em;
   margin: 0 0 .5em 1.4em; }
 
+@media (min-width: 768px) {
+  .hamburger {
+    display: none; }
+
+  .nav {
+    max-height: none;
+    overflow: visible;
+    /*
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    */ }
+    .nav:before {
+      display: none; }
+    .nav i {
+      display: none; }
+    .nav li {
+      position: relative; }
+      .nav li a:hover {
+        text-decoration: none; }
+      .nav li.menu-item-has-children ul {
+        max-height: none;
+        overflow: visible; }
+        .nav li.menu-item-has-children ul li {
+          float: none; }
+        .nav li.menu-item-has-children ul ul li a {
+          padding-left: 10px; }
+      .nav li.current-menu-item > a, .nav li.current-menu-ancestor > a {
+        color: #FFF; } }
+
 /*# sourceMappingURL=ontrend.css.map */

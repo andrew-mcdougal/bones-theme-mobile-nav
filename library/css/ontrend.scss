@@ -115,3 +115,99 @@ body {
   font-size: 1em;
   margin: 0 0 .5em 1.4em;
 }
+
+@media (min-width:768px) {
+  // hamburger
+  .hamburger {
+    display: none;
+  }
+
+  .nav {
+    max-height: none;
+    overflow: visible;
+
+    /*
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    */
+
+    &:before {
+      display: none;
+    }
+
+    i {
+      display: none;
+    }
+
+    li {
+      position: relative;
+
+      a {
+        //font-size: .7em;
+      }
+
+      a:hover {
+        text-decoration: none;
+      }
+
+      &.menu-item-has-children {
+
+        ul {
+          max-height: none;
+          overflow: visible;
+
+          li {
+            float: none;
+          }
+
+          ul li a {
+            padding-left: 10px;
+          }
+        }
+      }
+
+      &.current-menu-item,
+      &.current-menu-ancestor {
+
+        > a {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
