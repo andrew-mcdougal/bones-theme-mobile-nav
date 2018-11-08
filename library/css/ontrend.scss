@@ -1,7 +1,7 @@
 $white: #FFF;
 $primary: #2C3B41;
 $primary-lite: lighten($primary, 20%);
-
+$primary-liter: lighten($primary, 40%);
 
 
 // settings
@@ -25,6 +25,8 @@ body {
   top: 15px;
 }
 
+
+
 // no height mobile nav for slidedown effect
 .nav {
   max-height: 0;
@@ -33,6 +35,61 @@ body {
 
   &.show-menu {
     max-height: 100vh;
+  }
+
+  li {
+    position: relative;
+    border-top: 1px solid rgba($white, 0.2);
+
+    a {
+      font-size: .9em;
+
+      color: $primary-liter;
+
+      &:visited,
+      &:hover,
+      &:focus
+      &:visited:hover,
+      &:visited:focus,
+      &:link,
+      &:visited:link {
+        color: $primary-liter;
+      }
+
+      &:hover {
+        background: darken($primary, 1%);
+      }
+    }
+
+    // has sub nav
+    &.menu-item-has-children {
+
+      .fa {
+        position: absolute;
+        z-index: 100;
+        cursor: pointer;
+        right: 10px;
+        top: 12px;
+        font-size: 1.5em;
+        color: $primary-liter;
+      }
+
+      // sub nav
+      ul {
+        margin: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: all .4s ease-in;
+
+        &.show-submenu {
+          max-height: 100vh;
+        }
+
+        ul li a {
+          padding-left: 40px;
+        }
+      }
+    }
   }
 }
 
@@ -54,7 +111,7 @@ body {
 }
 
 .site-subheader {
-  font-size: 1em;
-  margin: 0em 0 .5em 1.4em;
   color: $primary-lite;
+  font-size: 1em;
+  margin: 0 0 .5em 1.4em;
 }
