@@ -16,6 +16,10 @@ body {
 // mobile first header
 .header {
   background: $primary;
+
+  .desktop-header {
+    display: none;
+  }
 }
 
 // hamburger
@@ -117,6 +121,56 @@ body {
 }
 
 @media (min-width:768px) {
+
+  .header {
+
+    .mobile-header {
+      display: none;
+    }
+
+    .desktop-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1em;
+
+      img {
+        width: 250px;
+        height: auto;
+        padding: .75em;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .desktop-header--contact {
+
+      }
+
+      p {
+        margin: 0;
+        text-align: right;
+
+        a {
+          color: $primary-liter;
+          text-decoration: none;
+
+          &:hover {
+            color: rgba($white, .6);
+          }
+        }
+
+        &.desktop-header--contact-phone {
+          font-size: 1.5em;
+          margin-bottom: 1em;
+        }
+      }
+
+    }
+  }
+
   // hamburger
   .hamburger {
     display: none;
@@ -145,6 +199,7 @@ body {
 
     li {
       position: relative;
+      border: none;
 
       a {
         //font-size: .7em;
