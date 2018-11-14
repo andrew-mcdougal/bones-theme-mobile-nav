@@ -18,10 +18,22 @@
 
 					<?php endif; ?>
 
-					<h5>Register for exclusive members content</h5>
-					<?php echo do_shortcode("[wppb-register]"); ?>
+					<div class="widget">
+						<?php
+						if ( is_user_logged_in() ) {
+							?>
+							<h4 class="widgettitle">Members area</h4>
+							<?php
+						    echo do_shortcode("[wppb-login]");
+						} else {
+							?>
+						    <h4 class="widgettitle">Register for exclusive members content</h4>
+							<?php echo do_shortcode("[wppb-register]"); ?>
 
-					<h5>Already a member? Login below</h5>
-					<?php echo do_shortcode("[wppb-login]"); ?>
+							<h4 class="widgettitle">Already a member? Login below</h4>
+							<?php echo do_shortcode("[wppb-login]"); }
+							?>
+						
+					</div>
 
 				</div>
