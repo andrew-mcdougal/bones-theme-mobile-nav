@@ -18,4 +18,10 @@
 
 					<?php endif; ?>
 
+					<h5>Register for exclusive members content</h5>
+					<?php echo do_shortcode("[wppb-register]"); ?>
+
+					<h5>Already a member? Login below</h5>
+					<?php echo do_shortcode("[wppb-login]"); ?>
+
 				</div>

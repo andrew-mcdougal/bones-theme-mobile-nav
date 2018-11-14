@@ -1,6 +1,7 @@
 body {
   font-size: 18px;
-  line-height: 120%; }
+  line-height: 120%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .header {
   background: #2C3B41; }
@@ -123,5 +124,23 @@ body {
           padding-left: 10px; }
       .nav li.current-menu-item > a, .nav li.current-menu-ancestor > a {
         color: #FFF; } }
+button {
+  background: #2C3B41;
+  color: #FFF;
+  padding: .5em;
+  border: none;
+  border-radius: 5px; }
+
+.sidebar {
+  background: #FFF;
+  margin-top: 0;
+  border: 1px solid #ccc;
+  border-radius: 3px; }
+
+.widget_media_image {
+  text-align: center; }
+
+.searchform input {
+  box-sizing: border-box; }
 
 /*# sourceMappingURL=ontrend.css.map */

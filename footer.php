@@ -20,6 +20,12 @@
 
 					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
 
+                    <?php if ( is_active_sidebar( 'footer_widget' ) ) : ?>
+                        <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+                            <?php dynamic_sidebar( 'footer_widget' ); ?>
+                        </div><!-- #primary-sidebar -->
+                    <?php endif; ?>
+
 				</div>
 
 			</footer>

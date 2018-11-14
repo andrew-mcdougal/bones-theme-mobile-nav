@@ -8,6 +8,7 @@ $primary-liter: lighten($primary, 40%);
 body {
   font-size: 18px;
   line-height: 120%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 
@@ -236,8 +237,35 @@ body {
   }
 }
 
+// elements
+button {
+  background: $primary;
+  color: $white;
+  padding: .5em;
+  border: none;
+  border-radius: 5px;
+}
+
+// sidebar
+.sidebar {
+  background: $white;
+  margin-top: 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.widget_media_image {
+  text-align: center;
+}
 
 
+// search
+.searchform {
+
+  input {
+    box-sizing: border-box;
+  }
+}
 
 
 
