@@ -33,7 +33,7 @@ body {
   overflow: hidden;
   transition: all .4s ease-in; }
   .nav.show-menu {
-    max-height: 100vh; }
+    max-height: 600vh; }
   .nav li {
     position: relative;
     border-top: 1px solid rgba(244, 244, 244, 0.3); }
@@ -151,7 +151,11 @@ button {
   background: #FFF;
   margin-top: 0;
   border: 1px solid #ccc;
-  border-radius: 3px; }
+  border-radius: 3px;
+  padding: 1.5em; }
+  @media (min-width: 768px) {
+    .sidebar {
+      padding: 0; } }
 
 .widget_media_image {
   text-align: center; }
