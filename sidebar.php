@@ -18,7 +18,7 @@
 
 					<?php endif; ?>
 
-					<div class="widget">
+					<div class="widget" style="display:none;">
 						<?php
 						if ( is_user_logged_in() ) {
 							?>

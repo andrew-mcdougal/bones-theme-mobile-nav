@@ -280,6 +280,33 @@ add_action( 'widgets_init', 'custom_widgets' );
 
 
 
+// Login/register form edit
+//* Add custom message to WordPress login page
+
+function ontrend_login_message( $message ) {
+    if ( empty($message) ){
+        return "<p><strong>Welcome to the Skin Temple Members area. Please login to continue</strong></p>";
+    } else {
+        return $message;
+    }
+}
+
+add_filter( 'login_message', 'ontrend_login_message' );
+
+
+// Change WordPress’ Default “Register For This Site” Message To Your Own Custom Text
+function change_reg_message($message)
+{
+    // change messages that contain 'Register'
+    if (strpos($message, 'Register') !== FALSE) {
+        return "<p><strong>Welcome to the Skin Temple Members area. Please register to continue</strong></p>";
+    } else {
+        return $message;
+    }
+}
+
+// add our new function to the login_message hook
+add_action('login_message', 'change_reg_message');
 
 
 
