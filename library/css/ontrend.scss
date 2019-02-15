@@ -162,6 +162,10 @@ body {
 
 @media (min-width:768px) {
 
+  .nav {
+    transition: none;
+  }
+
   .header {
 
     .mobile-header {
@@ -371,7 +375,40 @@ button {
   }
 }
 
+// gallery
 
+.gallery {
+  margin-bottom: 2em;
+  border-bottom: 1px solid #eee;
+}
+
+.gallery-item {
+  display: inline-block;
+  border: 1px solid #eee;
+  line-height: 0;
+  margin: .5em;
+  border-radius: 5px;
+
+  &:nth-child(4n+1) {
+    margin-left: 0;
+  }
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+
+  &:nth-child(4n+1) {
+    margin-left: 0;
+  }
+
+  a {
+    font-size: 0;
+  }
+
+  img {
+    margin: 0;
+  }
+}
 
 
 

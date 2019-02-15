@@ -82,6 +82,9 @@ body {
   margin: 0 0 .5em 1.4em; }
 
 @media (min-width: 768px) {
+  .nav {
+    transition: none; }
+
   .header .mobile-header {
     display: none; }
   .header .desktop-header {
@@ -195,5 +198,26 @@ button {
       margin-top: 0; }
 .hentry .entry-content {
   padding-top: 0; }
+
+.gallery {
+  margin-bottom: 2em;
+  border-bottom: 1px solid #eee; }
+
+.gallery-item {
+  display: inline-block;
+  border: 1px solid #eee;
+  line-height: 0;
+  margin: .5em;
+  border-radius: 5px; }
+  .gallery-item:nth-child(4n+1) {
+    margin-left: 0; }
+  .gallery-item:nth-child(4n) {
+    margin-right: 0; }
+  .gallery-item:nth-child(4n+1) {
+    margin-left: 0; }
+  .gallery-item a {
+    font-size: 0; }
+  .gallery-item img {
+    margin: 0; }
 
 /*# sourceMappingURL=ontrend.css.map */
