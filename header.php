@@ -48,11 +48,30 @@
 
 				<div id="inner-header" class="wrap cf">
 
-					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-					<p class="site-header header-font" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
+                    <!-- mobile header -->
+                    <div class="mobile-header">
+                        <p class="site-header header-font" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
+                        <p class="site-subheader header-font"><?php bloginfo('description'); ?></p>
+                    </div>
 
-					<?php // if you'd like to use the site description you can un-comment it below ?>
-					<p class="site-subheader header-font"><?php bloginfo('description'); ?></p>
+                    <!-- desktop header -->
+                    <div class="desktop-header">
+                        <div class="desktop-header--logo">
+                            <a href="<?php echo home_url(); ?>" rel="nofollow">
+                                <img src="<?php echo get_template_directory_uri(); ?>/library/images/skintemple-melbourne-logo.png" />
+                            </a>
+                        </div>
+                        <div class="desktop-header--contact">
+                            <p class="desktop-header--contact-phone"><a href="tel:+61398672992">(03) 9867 2992</a></p>
+                            <p class="desktop-header--contact-address">
+                                <a href="https://goo.gl/maps/dG3jYh3Xft12" target="_blank">
+                                    401 St Kilda Road,<br> 
+                                    <small>(main entrance at 31 Arnold St),</small> <br>
+                                    Melbourne, VIC 3004
+                                </a>
+                            </p>
+                        </div>
+                    </div>
 
 					<!-- hamburger icon -->
 					<button class="hamburger hamburger--collapse" type="button">

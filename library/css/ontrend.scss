@@ -1,13 +1,45 @@
+// fonts
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond|Oswald');
+
 $white: #FFF;
-$primary: #2C3B41;
+$primary: #373737;
+$primary: #0a1612;
 $primary-lite: lighten($primary, 20%);
 $primary-liter: lighten($primary, 40%);
+$secondary: #C0B283;
+$silk: #DCD0C0;
+$paper: #F4F4F4;
+$highlight: #57bc90;
+$highlight: #01abaa;
 
 
 // settings
 body {
   font-size: 18px;
   line-height: 120%;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'EB Garamond', serif;
+  color: $primary;
+
+  a {
+    color: $primary;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    color: $primary;
+  }
+
+  #container {
+    background: $paper;
+  }
+
+  .footer {
+    background: $highlight;
+    color: $primary;
+    font-size: .8em;
+  }
 }
 
 
@@ -16,6 +48,10 @@ body {
 // mobile first header
 .header {
   background: $primary;
+
+  .desktop-header {
+    display: none;
+  }
 }
 
 // hamburger
@@ -34,17 +70,17 @@ body {
   transition: all .4s ease-in;
 
   &.show-menu {
-    max-height: 100vh;
+    max-height: 600vh;
   }
 
   li {
     position: relative;
-    border-top: 1px solid rgba($white, 0.2);
+    border-top: 1px solid rgba($paper, .3);
 
     a {
       font-size: .9em;
 
-      color: $primary-liter;
+      color: $silk;
 
       &:visited,
       &:hover,
@@ -53,7 +89,7 @@ body {
       &:visited:focus,
       &:link,
       &:visited:link {
-        color: $primary-liter;
+        color: $silk;
       }
 
       &:hover {
@@ -64,6 +100,14 @@ body {
     // has sub nav
     &.menu-item-has-children {
 
+      li a {
+        background: $primary;
+
+        &:hover {
+          background: rgba($primary, .8);
+        }
+      }
+
       .fa {
         position: absolute;
         z-index: 100;
@@ -71,7 +115,7 @@ body {
         right: 10px;
         top: 12px;
         font-size: 1.5em;
-        color: $primary-liter;
+        color: $silk;
       }
 
       // sub nav
@@ -95,7 +139,7 @@ body {
 
 // site header
 .header-font {
-  font-family: 'Cormorant Garamond', serif;
+  //font-family: 'Cormorant Garamond', serif;
 }
 
 .site-header {
@@ -106,23 +150,93 @@ body {
 
   a {
     text-decoration: none;
-    color: $white;
+    color: $secondary;
   }
 }
 
 .site-subheader {
-  color: $primary-lite;
+  color: $paper;
   font-size: 1em;
   margin: 0 0 .5em 1.4em;
 }
 
 @media (min-width:768px) {
+
+  .nav {
+    transition: none;
+  }
+
+  .header {
+
+    .mobile-header {
+      display: none;
+    }
+
+    .desktop-header {
+      display: block;
+
+      .desktop-header--logo,
+      .desktop-header--contact {
+        float: left;
+      }
+
+      .desktop-header--contact {
+        float: right;
+      }
+
+      
+      @supports (display: grid) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;  
+      }
+      
+
+      img {
+        width: 250px;
+        height: auto;
+        padding: .75em;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .desktop-header--contact {
+
+      }
+
+      p {
+        margin: 0;
+        text-align: right;
+
+        a {
+          color: $silk;
+          text-decoration: none;
+
+          &:hover {
+            color: rgba($silk, .9);
+          }
+        }
+
+        &.desktop-header--contact-phone {
+          font-size: 1.5em;
+          margin-bottom: 1em;
+        }
+      }
+
+    }
+  }
+
   // hamburger
   .hamburger {
     display: none;
   }
 
   .nav {
+    clear: both;
     max-height: none;
     overflow: visible;
 
@@ -145,6 +259,7 @@ body {
 
     li {
       position: relative;
+      border: none;
 
       a {
         //font-size: .7em;
@@ -181,14 +296,119 @@ body {
   }
 }
 
+// elements
+button {
+  background: $primary;
+  color: $white;
+  padding: .5em;
+  border: none;
+  border-radius: 5px;
+}
+
+// sidebar
+.sidebar {
+  background: $white;
+  margin-top: 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 1.5em;
+
+  @media (min-width:768px) {
+    padding: 0;
+  }
+}
+
+.widget_media_image {
+  text-align: center;
+}
+
+.widgettitle {
+  border: none;
+}
+
+
+// search
+.searchform {
+
+  input {
+    box-sizing: border-box;
+    font-family: "EB Garamond",serif;
+  }
+}
 
 
 
+// Pages
+#breadcrumbs {
 
+  .home & {
+    display: none;
+  }
 
+  margin: 0 0 1em 0;
+  font-size: 0.8em;
+  font-family: 'Oswald', sans-serif;
 
+  a {
+    color: rgba($primary, .8);
+    font-weight: 400;
+  }
+}
 
+.hentry {
 
+  header {
+    border: none;
+    padding-bottom: .5em;
+
+    h1 {
+      margin-top: .8em;
+
+      .home & {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .entry-content {
+    padding-top: 0;
+  }
+}
+
+// gallery
+
+.gallery {
+  margin-bottom: 2em;
+  border-bottom: 1px solid #eee;
+}
+
+.gallery-item {
+  display: inline-block;
+  border: 1px solid #eee;
+  line-height: 0;
+  margin: .5em;
+  border-radius: 5px;
+
+  &:nth-child(4n+1) {
+    margin-left: 0;
+  }
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+
+  &:nth-child(4n+1) {
+    margin-left: 0;
+  }
+
+  a {
+    font-size: 0;
+  }
+
+  img {
+    margin: 0;
+  }
+}
 
 
 
