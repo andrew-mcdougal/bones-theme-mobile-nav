@@ -11,6 +11,10 @@ body {
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
     color: #0a1612; }
+  body hr {
+    border: none;
+    height: 1px;
+    background: #eee; }
   body #container {
     background: #F4F4F4; }
   body .footer {
@@ -202,6 +206,9 @@ button {
 .gallery {
   margin-bottom: 2em;
   border-bottom: 1px solid #eee; }
+  .media-page .gallery {
+    border: none;
+    margin: 0; }
 
 .gallery-item {
   display: inline-block;
@@ -251,5 +258,8 @@ button {
         border-radius: 4px; }
       .gallery .gallery-item .gallery-caption {
         text-align: center; } }
+.media-page .wp-caption {
+  display: inline-block;
+  margin: 1em; }
 
 /*# sourceMappingURL=ontrend.css.map */

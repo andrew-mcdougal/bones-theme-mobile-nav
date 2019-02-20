@@ -31,6 +31,12 @@ body {
     color: $primary;
   }
 
+  hr {
+    border: none;
+    height: 1px;
+    background: #eee;
+  }
+
   #container {
     background: $paper;
   }
@@ -380,6 +386,11 @@ button {
 .gallery {
   margin-bottom: 2em;
   border-bottom: 1px solid #eee;
+
+  .media-page & {
+    border: none;
+    margin: 0;
+  }
 }
 
 .gallery-item {
@@ -458,7 +469,14 @@ button {
 }
 
 
+// media page
+.media-page {
 
+  .wp-caption {
+    display: inline-block;
+    margin: 1em;
+  }
+}
 
 
 
