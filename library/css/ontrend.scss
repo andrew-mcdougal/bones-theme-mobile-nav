@@ -410,6 +410,53 @@ button {
   }
 }
 
+.entry-content .gallery-caption {
+  font-family: 'EB Garamond', serif;
+  padding: 1rem .5rem;
+  max-width: 100%;
+  margin: 0;
+  line-height: 100%;
+  word-break: break-all; 
+}
+
+.mfp-gallery {
+  background: #000;
+}
+
+.mfp-figure small {
+  font-size: 1em;
+  line-height: 1em;
+}
+
+@supports (display: grid) {
+  .gallery {
+    display: grid;
+
+    &.gallery-columns-3 {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &.gallery-columns-4 {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .gallery-item {
+      border: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        border-radius: 4px;
+      }
+
+      .gallery-caption {
+        text-align: center;;
+      }
+    }
+  }
+}
+
 
 
 

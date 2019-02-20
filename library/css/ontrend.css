@@ -220,4 +220,36 @@ button {
   .gallery-item img {
     margin: 0; }
 
+.entry-content .gallery-caption {
+  font-family: 'EB Garamond', serif;
+  padding: 1rem .5rem;
+  max-width: 100%;
+  margin: 0;
+  line-height: 100%;
+  word-break: break-all; }
+
+.mfp-gallery {
+  background: #000; }
+
+.mfp-figure small {
+  font-size: 1em;
+  line-height: 1em; }
+
+@supports (display: grid) {
+  .gallery {
+    display: grid; }
+    .gallery.gallery-columns-3 {
+      grid-template-columns: 1fr 1fr 1fr; }
+    .gallery.gallery-columns-4 {
+      grid-template-columns: 1fr 1fr 1fr 1fr; }
+    .gallery .gallery-item {
+      border: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .gallery .gallery-item img {
+        border-radius: 4px; }
+      .gallery .gallery-item .gallery-caption {
+        text-align: center; } }
+
 /*# sourceMappingURL=ontrend.css.map */
